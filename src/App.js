@@ -37,8 +37,8 @@ const finalSearch = (e) => {
       <div className="App">
 
         <div className="container">      
-          <video autoPlay muted loop>      
-            <source src={video} type="video/mp4" playsinline/>      
+          <video autoPlay muted loop playsinline>      
+            <source src={video} type="video/mp4"/>      
           </video>      
           <h1>Find a Recipe</h1>      
         </div>
