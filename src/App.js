@@ -37,7 +37,7 @@ const finalSearch = (e) => {
       <div className="App">
 
         <div className="container">      
-          <video autoPlay muted loop playsinline>      
+          <video autoPlay muted loop playsInline>      
             <source src={video} type="video/mp4"/>      
           </video>      
           <h1>Find a Recipe</h1>      
@@ -57,9 +57,9 @@ const finalSearch = (e) => {
         </div>
 
         <div>
-            {myRecipes.map(element => (
-                <MyRecipyComponent 
-                  id = {element.id}
+            {myRecipes.map((element, index) => (
+                <MyRecipyComponent
+                  key = {index}
                   label = {element.recipe.label}
                   image = {element.recipe.image}
                   calories = {element.recipe.calories}

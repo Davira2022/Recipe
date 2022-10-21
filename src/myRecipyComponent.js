@@ -1,8 +1,8 @@
 import check from "./check.png"
 
-function MyRecipyComponent({id, label, image, calories, ingredients, full}) {
+function MyRecipyComponent({label, image, calories, ingredients, full}) {
     return (
-        <div className="list" key={id}>
+        <div className="list">
             <div className="content">
                 <h2>{label}</h2>
             </div>
@@ -11,8 +11,8 @@ function MyRecipyComponent({id, label, image, calories, ingredients, full}) {
                 </div>
                 <div>
                     <ul>
-                        {ingredients.map(ingredient => (
-                            <li>
+                        {ingredients.map((ingredient, index) => (
+                            <li key={index}>
                                 <img src= {check} className="check" alt = "checkmark"/>
                                 {ingredient}
                             </li>)
@@ -21,7 +21,7 @@ function MyRecipyComponent({id, label, image, calories, ingredients, full}) {
                 </div>
                 <div className="content">
                     <p>{calories.toFixed()} calories</p>
-                    <p>See full recipe on: <href>{full}</href></p>
+                    <p>See full recipe on: <a href={full} target="_blank">show</a></p>
                 </div>
         </div>
     )
