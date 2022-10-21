@@ -21,7 +21,7 @@ function MyRecipyComponent({label, image, calories, ingredients, full}) {
                 </div>
                 <div className="content">
                     <p>{calories.toFixed()} calories</p>
-                    <p>See full recipe on: <a href={full}>show</a></p>
+                    <p>See full recipe on: <a href={full} target="_blank" rel="noreferrer">show</a></p>
                 </div>
         </div>
     )
